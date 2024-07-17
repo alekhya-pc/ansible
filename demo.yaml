@@ -8,3 +8,5 @@
     - name: print Hello World
       ansible.builtin.debug:
         msg: Hello World
+
+# ansible.builtin.shell: npm install # why we are using this in catalogue ? sol : there could be a npm module, however we are still using shell, since this step will get removed when CI comes in.
