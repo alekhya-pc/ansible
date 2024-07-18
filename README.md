@@ -1,12 +1,13 @@
-# ansible
-
+# ansible 
+# below links for ansible syntax's:
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_module.html
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html
 # for template structure-:  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
 #  https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html
-#
+# for role dependencies :  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html  
+# here how the use of role dependencies work - (Role dependencies let you automatically pull in other roles when using a role) in other words: when you call dependencies in code by using syntax it first executes the dependencies and then runs the code.
 # 
 #
 #
