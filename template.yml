@@ -1,6 +1,6 @@
--name: Demo on template
-hosts: localhost
-tasks:
+- name: Demo on template
+  hosts: localhost
+  tasks:
    - name: copy file
      ansible.builtin.copy:
        src: Hello.txt
