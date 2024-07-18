@@ -3,10 +3,10 @@
   tasks:
    - name: copy file
      ansible.builtin.copy:
-       src: Hello.txt
+       src: hello.txt
        dest: /tmp/h1.txt
 
    - name: Template file
      ansible.builtin.copy:
-       src: Hello.txt
+       src: hello.txt
        dest: /tmp/h2.txt
