@@ -7,7 +7,7 @@
 # for template structure-:  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
 #  https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html
 # for role dependencies :  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html  
-# here how the use of role dependencies work - (Role dependencies let you automatically pull in other roles when using a role) in other words: when you call dependencies in code by using syntax it first executes the dependencies and then runs the code.
+# Here how the use of role dependencies work - (Role dependencies let you automatically pull in other roles when using a role) in other words: when you call dependencies in code by using syntax it first executes the dependencies and then runs the code.
 # 
 #
 #
