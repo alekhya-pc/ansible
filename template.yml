@@ -1,4 +1,4 @@
-- name: Demo on template
+- name: Demo on template # template concept
   hosts: localhost
   tasks:
    - name: copy file
@@ -10,3 +10,19 @@
      ansible.builtin.copy:
        src: hello.txt
        dest: /tmp/h2.txt
+
+ # In the roboshop ansible we need to rename file directories with templates.
+ # Also, adding to above we need to change ansible.builtin.copy to ansible.builtin.template
+ # For example
+
+  # - name: copy nginx file
+  #   ansible.builtin.copy:
+  #   src: nginx.conf
+  #   dest: /etc/nginx/nginx.conf
+  #
+  #  to
+  #
+  #  - name: copy nginx file
+  #  ansible.builtin.template:
+  #  src: nginx.conf
+  #  dest: /etc/nginx/nginx.conf
