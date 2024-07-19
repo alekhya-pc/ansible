@@ -11,7 +11,7 @@
 # for conditions : https://docs.ansible.com/ansible/2.9/user_guide/playbooks_conditionals.html  ( usage of conditions is done in user component)
 # for grouping the modules -  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html
 # for loops - https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html
-#
+# for installs of dnf  https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html
 #
 # print Update Redis config
 # sed -i -e '/^bind/ s/127.0.0.1/0.0.0.0/' -e '/protected-mode/ c protected-mode no' /etc/redis/redis.conf
