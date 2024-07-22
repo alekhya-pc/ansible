@@ -19,4 +19,7 @@
 # first is updating 127.0.0.1 to 0.0.0.0 in the given configure file(/etc/redis/redis.conf)
 # Second is updating protected-mode to protected-mode no in the given configure file (/etc/redis/redis.conf)
 
-
+# to check and go through the main objectives of Retired - Red Hat Certified Specialist in Ansible Automation exam we need to refer to the link (https://www.redhat.com/en/services/training/ex407-retired-red-hat-certified-specialist-in-ansible-automation-exam?section=objectives)
+# in the above link we see core components,
+# Install and configure an Ansible control node,
+# Configure Ansible managed nodes and many more.

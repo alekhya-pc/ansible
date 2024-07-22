@@ -64,3 +64,13 @@
     - name: Print
       ansible.builtin.debug:
         msg: ""
+
+# Retrieving the variables
+- name: Retrieve the output from previous task and store in variables.
+  hosts: localhost
+  tasks:
+    - ansible.builtin.shell: uptime
+      register: out
+    - ansible.builtin.debug:
+        msg: "{{ out }}"
+
