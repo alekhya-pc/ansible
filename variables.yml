@@ -1,9 +1,9 @@
 - name: Demo on Variables
   hosts: localhost
-  vars:
-    URL: vars.google.com
   vars_files:
     - sample-vars.yml
+  vars:
+    URL: play.example.com
   tasks:
     - name: Print URL
       ansible.builtin.debug:
@@ -12,3 +12,11 @@
                               # Unlike shell, here in ansible single or double quotes doesn't have any difference
   roles:      # here the role will execute and then task will execute
     - sample   # to run  playbook we use :- ansible-playbook variables.yml in putty ansible instance.
+
+# Variables precedence
+# 1. cli -e variable (git pull ; ansible-playbook variables.yml -e URL=cli.example.com)
+# 2. roles vars
+# 3. vars_files
+# 4. vars
+
+# n. roles defaults is the last priority
