@@ -17,7 +17,7 @@
 
 # Variables precedence (output comes in this priority order)
 # 1. cli -e variable (here variable is given in command line.:- git pull ; ansible-playbook variables.yml -e URL=cli.example.com)
-# 2. tasks
+# 2. tasks (here importance is given to the vars given inside the tasks)
 # 3. roles vars
 # 4. vars_files
 # 5. vars
@@ -43,4 +43,4 @@
   tasks:
     - name: Print
       ansible.builtin.debug:
-        msg: "{{ CLASS }} - {{ timings[0] }}"
+        msg: "{{ CLASS }} - {{ timings[1] }}"
