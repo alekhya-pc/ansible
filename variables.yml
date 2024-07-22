@@ -10,8 +10,8 @@
         msg: "URL - {{ URL }}, URL1 - {{ URL1 }}" #same like shell you care accessing variables with prefix $, here variable will be under {{ }} , Can be given any url in the command line
                               # If the value starts with variable, then it requires quotes and we can use any single or double quotes
                               # Unlike shell, here in ansible single or double quotes doesn't have any difference
-        vars:
-          URL: tasks.example.com
+      vars:
+        URL: tasks.example.com
   roles:      # here the role will execute and then task will execute
     - sample   # to run  playbook we use :- ansible-playbook variables.yml in putty ansible instance.
 
