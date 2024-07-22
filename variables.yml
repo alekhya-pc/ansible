@@ -30,7 +30,7 @@
 #
 #
 
-- name: variable type demo
+- name: Variable type demo
   hosts: localhost
   vars:
      CLASS: devops
@@ -41,6 +41,6 @@
        6am: John
        7am: peter
   tasks:
-    - name: print
+    - name: Print
       ansible.builtin.debug:
         msg: "{{ CLASS }} - {{ timings[0] }}"
