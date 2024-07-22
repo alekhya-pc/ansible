@@ -1,0 +1,8 @@
+# ansible is going to collect the information of the remote node and all its facts and stores it as an variables is called as facts
+
+- name: Facts
+  hosts: localhost
+  tasks:
+  - name: Print fact
+    ansible.builtin.debug:
+      msg: "{{ ansible_hostname }}"

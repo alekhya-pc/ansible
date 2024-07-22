@@ -26,21 +26,41 @@
 # Variable types
 # 1. simple variable
 # 2. list
-# 3. Dictionary
+# 3. Dictionary/map
 #
 #
 
 - name: Variable type demo
   hosts: localhost
   vars:
-     CLASS: devops
-     timings:
+     CLASS: devops # plain variable
+     timings:  #list
        - 6am
        - 7am
-     trainers:
+     trainers: # dictionary/map
        6am: John
        7am: peter
   tasks:
     - name: Print
       ansible.builtin.debug:
         msg: "{{ CLASS }} - {{ timings[0] }}, trainer - {{ trainers['6am'] }}"
+
+# o/p :- msg:"devops - 6am, trainer - john"
+
+# Datatypes in variables: (ansible supports below datatypes)(In shell it supports only string datatypes is used,terraform supports only true or false)
+
+- name: variable data types
+  hosts: localhost
+  vars:
+    number1: 10
+    number2: 11.1  #(float value is also considered as a number)
+    string1: abc
+    string2: xyz123
+    boolean1: yes
+    boolean2: no
+    boolean3: true
+    boolean4: false
+  tasks:
+    - name: Print
+      ansible.builtin.debug:
+        msg: ""
