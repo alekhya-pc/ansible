@@ -6,3 +6,6 @@
   - name: Print fact
     ansible.builtin.debug:
       msg: "{{ ansible_hostname }}"
+
+# o/p:- msg: "ip-172-31-82-141" (above playbook gives ip address as output (here the local host is already declared as the part of gathering facts and we are using that))
+# all facts and variables can be refered here :-  https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html
