@@ -10,13 +10,37 @@
         msg: "URL - {{ URL }}, URL1 - {{ URL1 }}" #same like shell you care accessing variables with prefix $, here variable will be under {{ }} , Can be given any url in the command line
                               # If the value starts with variable, then it requires quotes and we can use any single or double quotes
                               # Unlike shell, here in ansible single or double quotes doesn't have any difference
+        vars:
+          URL: tasks.example.com
   roles:      # here the role will execute and then task will execute
     - sample   # to run  playbook we use :- ansible-playbook variables.yml in putty ansible instance.
 
-# Variables precedence
-# 1. cli -e variable (git pull ; ansible-playbook variables.yml -e URL=cli.example.com)
-# 2. roles vars
-# 3. vars_files
-# 4. vars
-
+# Variables precedence (output comes in this priority order)
+# 1. cli -e variable (here variable is given in command line.:- git pull ; ansible-playbook variables.yml -e URL=cli.example.com)
+# 2. tasks
+# 3. roles vars
+# 4. vars_files
+# 5. vars
 # n. roles defaults is the last priority
+
+# Variable types
+# 1. simple variable
+# 2. list
+# 3. Dictionary
+#
+#
+
+- name: variable type demo
+  hosts: localhost
+  vars:
+     class: devops
+     timings:
+       - 6am
+       - 7am
+     trainers:
+       6am: John
+       7am: peter
+  tasks:
+    - name: print
+      ansible.builtin.debug:
+        msg: "{{ class }} - {{ timings[0] }}"
