@@ -3,7 +3,7 @@
   tasks:
     - shell: id roboshop
       register: out
-      ignore_errors: yes
+      ignore_errors: yes # (this step means even though we are getting error we are trying to proceed by ignoring the error)
 
     - debug:
        msg: User details - {{ out.stdout }}
